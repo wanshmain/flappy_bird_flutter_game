@@ -5,7 +5,7 @@ import 'package:flappy_bird/game/flappy_bird_game.dart';
 void main() {
   final game =FlappyBirdGame(); 
   runApp(
-    GameWidget(game: game,),
+    GameWidget(game: game),
     );
 }
 

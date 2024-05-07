@@ -15,7 +15,7 @@ class Pipe extends SpriteComponent with HasGameRef<FlappyBirdGame>{
   @override
   final double height;
   final PipePosition pipePosition;
-
+  @override
   Future<void> onLoad() async{
     final pipe=await Flame.images.load(Assets.pipe);
     final pipeRoteted=await Flame.images.load(Assets.piperotated);
@@ -28,6 +28,7 @@ class Pipe extends SpriteComponent with HasGameRef<FlappyBirdGame>{
         break;
       case PipePosition.bottom:
         position.y= gameRef.size.y - size.y -Config.groundHeight;
+        sprite =Sprite(pipe);
         break;
      
     }
